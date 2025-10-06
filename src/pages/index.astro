@@ -13,6 +13,7 @@ import Education from "../components/Education.astro";
 import LicensesCertificates from "../components/LicensesCertificates.astro";
 import Contact from "../components/Contact.astro";
 import Projects from "../components/Projects.astro";
+import Logo from "../assets/logo.PNG";
 ---
 
 <Layout
@@ -21,11 +22,7 @@ import Projects from "../components/Projects.astro";
 >
   <main class="px-4">
     <SectionContainer class="py-30 pb-24">
-      <img
-        class="rounded-full w-14 h-14"
-        src="https://avatars.githubusercontent.com/u/182549905?s=400&u=d1de9a7436ecc89dcf7e6b29f4ad51f91348fb3e&v=4"
-        alt="foto de perfil"
-      />
+      <img class="rounded-full w-14 h-14" src={Logo.src} alt="foto de perfil" />
       <h1
         class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-2 lg:pb-10"
       >

@@ -1,0 +1,49 @@
+---
+import LinkedIn from "../icons/LinkedinFooter.astro";
+import Github from "../icons/GithubLicense.astro";
+import Mail from "../icons/Mail.astro";
+import Instagram from "../icons/Instagram.astro";
+---
+
+<footer
+  class="py-8 bg-gray-700/30 flex justify-around sm:flex-row flex-col items-center gap-6"
+>
+  <p class="px-2 py-1.5 text-white/70">
+    © Benjamin Lopez Zigaran. Todos los derechos reservados.
+  </p>
+  <div class="flex gap-6 px-2">
+    <a
+      href="https://www.linkedin.com/in/benjamin-lopez-zigaran/"
+      target="_blank"
+      rel="noopener"
+      class="hover:scale-110 transition-transform duration-200 rounded-full py-1.5"
+    >
+      <LinkedIn class="mb-1 size-7 text-yellow-100 hover:text-white" />
+    </a>
+    <a
+      href="https://github.com/Benjalopezz27"
+      target="_blank"
+      rel="noopener"
+      class="hover:scale-110 transition-transform duration-200 rounded-full py-1.5"
+    >
+      <Github class="mb-1 size-7 text-yellow-100 hover:text-white" />
+    </a>
+    <a
+      href="https://www.instagram.com/benjalopezzigaran/"
+      target="_blank"
+      rel="noopener"
+      class="hover:scale-110 transition-transform duration-200 rounded-full py-1.5"
+    >
+      <Instagram class="mb-1 size-7 text-yellow-100 hover:text-white" />
+    </a>
+    <a
+      href="mailto:benjaminlopezzigaran01@gmail.com"
+      target="_blank"
+      rel="noopener"
+      class="hover:scale-105 transition-transform duration-200 rounded-full flex gap-1.5 bg-yellow-100/10 px-3 py-1.5 items-center hover:text-white"
+    >
+      <Mail class="mb-1 size-7 text-yellow-100" />
+      <p class="font-semibold text-yellow-100">Contactame</p>
+    </a>
+  </div>
+</footer>

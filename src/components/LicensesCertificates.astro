@@ -1,0 +1,40 @@
+---
+import License from "../icons/License.astro";
+import LicenseItem from "./LicenseItem.astro";
+const LICENSES_CERTIFICATES = [
+  {
+    title: "Dessarrollo Web",
+    company: "CoderHouse",
+    link: "https://pub.coderhouse.com/legacy-certificates/672c1ff2de79e9639221bd41?lang",
+    github: "https://github.com/Benjalopezz27/Comisio59920-BenjaminLopez",
+  },
+  {
+    title: "JavaScript",
+    company: "CoderHouse",
+    link: "https://pub.coderhouse.com/legacy-certificates/67b40feb364c08fc90faa5ce?lang",
+    github: "https://github.com/Benjalopezz27/Coder-JS",
+  },
+  {
+    title: "AngularJs",
+    company: "CoderHouse",
+    link: "https://pub.coderhouse.com/legacy-certificates/67cc75f73a3156078695f647?lang",
+    github: "https://github.com/Benjalopezz27/Coder-ANGULAR-final",
+  },
+];
+---
+
+<article class="mb-20 p-4 bg-gray-700/30 rounded-lg">
+  <h3 class="text-xl font-semibold">
+    <License class="inline size-7 me-2" />
+    Licencias y Certificaciones
+  </h3>
+  <ol class="flex justify-center flex-wrap">
+    {
+      LICENSES_CERTIFICATES.map((x) => (
+        <li class="mb-10 mx-1.5">
+          <LicenseItem {...x} />
+        </li>
+      ))
+    }
+  </ol>
+</article>

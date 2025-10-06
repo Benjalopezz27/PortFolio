@@ -1,0 +1,53 @@
+---
+import GithubLicense from "../icons/GithubLicense.astro";
+import Preview from "../icons/preview.astro";
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  linkGithub: string;
+  linkPreview: string;
+}
+const { title, description, image, linkGithub, linkPreview } = Astro.props;
+---
+
+<div
+  class="max-w-sm border rounded-lg shadow-sm bg-gray-800 border-gray-700 sm:mx-auto"
+>
+  <div class="overflow-hidden rounded-t-lg">
+    <a href="#">
+      <img
+        class="rounded-t-lg object-cover transform hover:scale-110 transition-transform duration-500 ease-in-out"
+        src={image}
+        alt=""
+      />
+    </a>
+  </div>
+  <div class="p-5">
+    <a href="#">
+      <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+        {title}
+      </h5>
+    </a>
+    <p class="mb-3 font-normal text-gray-100">
+      {description}
+    </p>
+    <div class="flex gap-4">
+      <a
+        href={linkGithub}
+        class="flex gap-2 text-gray-200 font-medium hover:text-yellow-100 transition-colors duration-200 mt-6"
+      >
+        <GithubLicense class="mb-4" />
+        Code
+      </a>
+      <a
+        target="_blank"
+        href={linkPreview}
+        class="flex gap-2 text-gray-200 font-medium hover:text-yellow-100 transition-colors duration-200 mt-6"
+      >
+        <Preview class="mb-4" />
+        Live Preview
+      </a>
+    </div>
+  </div>
+</div>

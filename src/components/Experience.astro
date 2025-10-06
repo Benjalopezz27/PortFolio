@@ -1,0 +1,32 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+const EXPERIENCE = [
+  {
+    title: "Atencion al Cliente",
+    company: "Insumos Medicos",
+    date: "2023-2024",
+    description:
+      "Proporcioné soporte excepcional a los clientes, resolviendo consultas y problemas de manera eficiente y profesional.",
+    badge: "Latest",
+    badgeColor: "blue",
+    link: "#",
+  },
+  {
+    title: "Freelance",
+    company: "Upwork",
+    date: "2024-2025",
+    description:
+      "Desarrollé sitios web personalizados para clientes, asegurando que sus necesidades y expectativas se cumplieran a través de soluciones innovadoras y funcionales.",
+  },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

@@ -1,0 +1,36 @@
+---
+const { title, company, link, github } = Astro.props;
+import Link from "../icons/Link.astro";
+import Github from "../icons/GithubLicense.astro";
+---
+
+<div
+  class="w-[200px] sm:w-[full] mt-4 p-4 bg-gray-900/90 rounded-lg shadow-sm hover:shadow-lg hover:scale-[1.01] transition-transform duration-100 ease-in-out"
+>
+  <a href="#">
+    <h5 class="mb-2 text-lg font-bold tracking-tight text-white">
+      {title}
+    </h5>
+  </a>
+  <p class="mb-3 font-normal text-gray-400">
+    {company}
+  </p>
+  <div class="flex gap-2 mt-8 justify-end">
+    <a
+      href={link}
+      target="_blank"
+      rel="noopener"
+      class="p-2 rounded-full hover:bg-white/10 transition-colors duration-200"
+    >
+      <Link />
+    </a>
+    <a
+      href={github}
+      target="_blank"
+      rel="noopener"
+      class="p-2 rounded-full hover:bg-white/10 transition-colors duration-200"
+    >
+      <Github class="size-6" />
+    </a>
+  </div>
+</div>

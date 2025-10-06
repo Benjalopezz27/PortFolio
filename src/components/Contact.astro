@@ -1,0 +1,34 @@
+---
+import Mail from "../icons/Mail.astro";
+import WhatsApp from "../icons/Whatsapp.astro";
+---
+
+<div
+  class="w-full h-full px-20 py-13 text-center border-t-6 border-t-yellow-100 rounded-lg shadow-sm bg-gray-800 mb-10"
+>
+  <h5 class="mb-2 text-3xl font-bold text-white">Pongámonos en contacto</h5>
+  <p class="mb-5 text-base sm:text-lg text-gray-200 text-pretty sm:text-md">
+    Estoy siempre abierto a discutir nuevas oportunidades y proyectos. No dudes
+    en ponerte en contacto ¡Me encantaría saber de ti!
+  </p>
+  <div class="items-center justify-center mt-10 gap-3 sm:flex">
+    <a
+      target="_blank"
+      rel="noopener"
+      href="mailto:benjaminlopezzigaran01@gmail.com"
+      class="px-5 py-3 text-base font-medium text-center inline-flex items-center text-white hover:text-gray-100 bg-transparent rounded-lg border border-yellow-100 hover:scale-[1.02] transition-transform duration-200"
+    >
+      <Mail class="me-2" />
+      Enviame un correo
+    </a>
+    <a
+      rel="noopener"
+      href="https://wa.me/543814565765"
+      target="_blank"
+      class="px-5 py-3 mt-3 md:mt-0 text-base font-medium text-center inline-flex items-center text-white hover:text-gray-100 bg-transparent rounded-lg border border-yellow-100 hover:scale-[1.02] transition-transform duration-200"
+    >
+      <WhatsApp class="me-2" />
+      WhatsApp
+    </a>
+  </div>
+</div>

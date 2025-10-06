@@ -1,0 +1,44 @@
+---
+import ProjectCard from "./ProjectCard.astro";
+import Proyecto1 from "../assets/Proyecto1.webp";
+import Proyecto2 from "../assets/Proyecto2.webp";
+import Proyecto3 from "../assets/Proyecto3.webp";
+const PROJECTS = [
+  {
+    title: "Yogur Griego",
+    description:
+      "Diseñé y desarrollé una Landing Page para una empresa. Utilicé Astro y TailwindCss para crear una experiencia de usuario atractiva.",
+    image: Proyecto1.src,
+    linkGithub: "https://github.com/Benjalopezz27/YogurGriego",
+    linkPreview: "https://yogurgriegojosefina.vercel.app/",
+  },
+  {
+    title: "Insumos Medicos",
+    description:
+      "Desarrollé la interfaz de un sitio web para una empresa, implementando un diseño responsivo y tecnologias como HTML y CSS.",
+    image: Proyecto2.src,
+    linkGithub: "https://github.com/Benjalopezz27/Comisio59920-BenjaminLopez",
+    linkPreview: "https://insumos-medicos-sigma.vercel.app/",
+  },
+  {
+    title: "Crud Tasks",
+    description:
+      "Proyecto de gestión de tareas con funcionalidades CRUD, desarrollado con Angular y TailWindCss para una experiencia de usuario eficiente.",
+    image: Proyecto3.src,
+    linkGithub: "https://github.com/Benjalopezz27/Crud-Tasks",
+    linkPreview: "https://crud-tasks-kappa.vercel.app/",
+  },
+];
+---
+
+<div>
+  <ol class="flex justify-around flex-wrap">
+    {
+      PROJECTS.map((project) => (
+        <li class="mb-10 ms-4">
+          <ProjectCard {...project} />
+        </li>
+      ))
+    }
+  </ol>
+</div>

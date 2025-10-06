@@ -1,11 +1,87 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import Badge from "../components/badge.astro";
+import GithubIcon from "../icons/Github.astro";
+import LinkedinIcon from "../icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import MailIcon from "../icons/Mail.astro";
+import Suitcase from "../icons/Suitcase.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Education from "../components/Education.astro";
+import LicensesCertificates from "../components/LicensesCertificates.astro";
+import Contact from "../components/Contact.astro";
+import Projects from "../components/Projects.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Porfolio de Benjamin - Desarrollador y Programador Web & Ciberseguridad"
+  description="Contrata a Benjamin Lopez Zigaran - Desarrollador Web y Experto en Ciberseguridad. Proyectos, habilidades y contacto."
+>
+  <main class="px-4">
+    <SectionContainer class="py-30 pb-24">
+      <img
+        class="rounded-full w-14 h-14"
+        src="https://avatars.githubusercontent.com/u/182549905?s=400&u=d1de9a7436ecc89dcf7e6b29f4ad51f91348fb3e&v=4"
+        alt="foto de perfil"
+      />
+      <h1
+        class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-2 lg:pb-10"
+      >
+        Desarrollador Web
+        <a
+          href="https://www.linkedin.com/in/benjamin-lopez-zigaran/"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge />
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
+        Me llamo Benjamín, tengo 19 años y soy estudiante de Desarollo y Calidad
+        de Software. <span class="text-yellow-100"> Desarrollador Web. </span>De
+        Tucuman, Argentina.
+      </h2>
+      <nav class="flex gap-3 text-wrap">
+        <SocialPill href="https://github.com/Benjalopezz27">
+          <GithubIcon class="size-6" />
+          Github
+        </SocialPill>
+
+        <SocialPill href="https://www.linkedin.com/in/benjamin-lopez-zigaran/">
+          <LinkedinIcon class="size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="mailto:benjaminlopezzigaran01@gmail.com">
+          <MailIcon class="size-6" />
+          Mail
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+        <Suitcase class="size-7" />
+        Experiencia
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="educacion">
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-2 items-center">
+        Educación
+      </h2>
+      <Education />
+      <LicensesCertificates />
+    </SectionContainer>
+    <SectionContainer id="proyectos">
+      <h2 class="text-2xl font-semibold mb-4 flex gap-x-3 items-center">
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+    <SectionContainer id="contacto">
+      <Contact />
+    </SectionContainer>
+  </main>
 </Layout>

@@ -14,6 +14,8 @@ import LicensesCertificates from "../components/LicensesCertificates.astro";
 import Contact from "../components/Contact.astro";
 import Projects from "../components/Projects.astro";
 import Logo from "../assets/logo.PNG";
+import Cv from "../icons/Cv.astro";
+import CvPersonal from "../../public/Cv.pdf";
 ---
 
 <Layout
@@ -54,6 +56,10 @@ import Logo from "../assets/logo.PNG";
         <SocialPill href="mailto:benjaminlopezzigaran01@gmail.com">
           <MailIcon class="size-6" />
           Mail
+        </SocialPill>
+        <SocialPill href={CvPersonal} target="_blank" rel="noopener" download>
+          <Cv class="size-6" />
+          Descargar CV
         </SocialPill>
       </nav>
     </SectionContainer>
